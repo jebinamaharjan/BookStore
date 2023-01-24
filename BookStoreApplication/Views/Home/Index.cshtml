@@ -1,0 +1,24 @@
+﻿@model BookModel
+@{
+    ViewData["Title"] = "Home";
+}
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1>Welcome to Bookstore</h1>
+        <p>
+            <form method="post" asp-action="searchbook" asp-controller="Book">
+                <input type="search" id="searchid" name="searchid" />
+                <input type="submit" value="Search"/>
+            </form>
+            
+        </p>
+    </div>
+</section>
+<div class="py-5 bg-light">
+    <div class="container">
+        <h3 class="h3">Top Books</h3>
+        @*@await Component.InvokeAsync("TopBooks", new {count = 5})*@
+        <vc:top-books count="6"></vc:top-books>
+        
+    </div>
+</div>

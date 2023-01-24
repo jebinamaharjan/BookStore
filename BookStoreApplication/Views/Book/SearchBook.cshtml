@@ -1,0 +1,18 @@
+﻿@model IEnumerable<BookModel>
+@{
+    ViewData["Title"] = "Search";
+}
+<div class="container">
+    <h3 class="display-4">Search Results</h3>
+    <div class="row">
+        @foreach (var book in Model)
+        {
+            <div class="col-md-4">
+                <partial name="_bookThumbnail" model="@book" />
+
+            </div>
+
+        }
+
+    </div>
+</div>
