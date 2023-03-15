@@ -101,9 +101,7 @@ D:\ASP\BookStoreApplication\BookStoreApplication\obj\Debug\netcoreapp3.1\BookSto
 D:\ASP\BookStoreApplication\BookStoreApplication\obj\Debug\netcoreapp3.1\BookStoreApplication.RazorTargetAssemblyInfo.cs
 D:\ASP\BookStoreApplication\BookStoreApplication\obj\Debug\netcoreapp3.1\BookStoreApplication.Views.pdb
 D:\ASP\BookStoreApplication\BookStoreApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-D:\ASP\BookStoreApplication\BookStoreApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\AboutUs.cshtml.g.cs
 D:\ASP\BookStoreApplication\BookStoreApplication\obj\Debug\netcoreapp3.1\Razor\Views\Book\GetAllBooks.cshtml.g.cs
-D:\ASP\BookStoreApplication\BookStoreApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\ContactUs.cshtml.g.cs
 D:\ASP\BookStoreApplication\BookStoreApplication\bin\Debug\netcoreapp3.1\libman.json
 D:\ASP\BookStoreApplication\BookStoreApplication\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Antiforgery.dll
 D:\ASP\BookStoreApplication\BookStoreApplication\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
@@ -429,3 +427,4 @@ D:\ASP\BookStoreApplication\BookStoreApplication\obj\Debug\netcoreapp3.1\Razor\V
 D:\ASP\BookStoreApplication\BookStoreApplication\obj\Debug\netcoreapp3.1\Razor\Views\Account\ForgotPassword.cshtml.g.cs
 D:\ASP\BookStoreApplication\BookStoreApplication\obj\Debug\netcoreapp3.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
 D:\ASP\BookStoreApplication\BookStoreApplication\obj\Debug\netcoreapp3.1\Razor\Views\Book\SearchBook.cshtml.g.cs
+D:\ASP\BookStoreApplication\BookStoreApplication\obj\Debug\netcoreapp3.1\Razor\Views\Book\UpdateBook.cshtml.g.cs

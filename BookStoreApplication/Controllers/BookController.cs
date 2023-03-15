@@ -91,6 +91,26 @@ namespace BookStoreApplication.Controllers
             }
             return View();
         }
+        public async Task<ViewResult> UpdateBook(int id)
+        {
+            var book = await _bookRepository.GetBook(id);
+            return View(book);
+        }
+        [HttpPost]
+        public async Task<IActionResult> UpdateBook(BookModel bookModel)
+        {
+            if (ModelState.IsValid)
+            {
+                await _bookRepository.UpdateBook(bookModel.Id, bookModel);
+                return RedirectToAction("GetAllBooks");
+            }
+            return View();
+        }
+        public async Task<IActionResult> DeleteBook(int id)
+        {
+            await _bookRepository.DeleteBook(id);
+            return RedirectToAction("GetAllBooks");
+        }
 
         private async Task<string> UploadImage(string folderPath, IFormFile file)
         {

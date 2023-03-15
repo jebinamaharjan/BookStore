@@ -25,6 +25,7 @@ namespace BookStoreApplication.Repository
                 UpdatedOn = DateTime.UtcNow,
                 Description = model.Description,
                 LanguageId = model.LanguageId,
+                Category = model.Category,
                 Title = model.Title,
                 TotalPage = model.TotalPage.HasValue ? model.TotalPage.Value : 0,
                 CoverImgUrl = model.CoverImageUrl,
@@ -115,6 +116,34 @@ namespace BookStoreApplication.Repository
                 TotalPage = book.TotalPage,
                 CoverImageUrl = book.CoverImgUrl
             }).ToListAsync();
+        }
+        public async Task<bool> UpdateBook(int id,BookModel bookModel)
+        {
+            var book = _context.Books.FirstOrDefault(x => x.Id == id);
+            if(book != null)
+            {
+                book.Title = bookModel.Title;
+                book.Author = bookModel.Author;
+                book.Category = bookModel.Category;
+                book.Description = bookModel.Description;
+                book.TotalPage = (int)bookModel.TotalPage;
+                book.LanguageId = bookModel.LanguageId;
+                //_context.Entry(bookModel).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+            }
+
+            return true;
+        }
+       
+        public async Task<bool> DeleteBook(int id)
+        {
+            var book = await _context.Books.FindAsync(id);
+            if(book != null)
+            {
+                _context.Books.Remove(book);
+                await _context.SaveChangesAsync();
+            }
+            return true;
         }
     }
 }

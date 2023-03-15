@@ -51,8 +51,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-12">
                     <a class="btn btn-outline-primary" href = "@Model.BookUrl" target="_blank">Read Now</a>
+                    <a class="btn btn-outline-primary" asp-controller="book" asp-action="UpdateBook" asp-route-id=@Model.Id target="_blank">Update</a>
+                    <a class="btn btn-danger" asp-controller="book" asp-action="DeleteBook" asp-route-id=@Model.Id target="_blank" onclick="return confirm('Do you really want to delete it?')">Delete</a>
                 </div>
             </div>
             <hr/>

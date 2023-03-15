@@ -27,13 +27,5 @@ namespace BookStoreApplication.Controllers
             await _emailService.SendTestEmail(options);*/
             return View();
         }
-        public ViewResult AboutUs()
-        {
-            return View();
-        }
-        public ViewResult ContactUs()
-        {
-            return View();
-        }
     }
 }

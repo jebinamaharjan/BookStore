@@ -1,0 +1,48 @@
+﻿@using BookStoreApplication.Enums
+@model BookModel
+@inject BookStoreApplication.Repository.ILanguageRepository _languageRepo
+@{
+    ViewData["Title"] = "UpdateBook";
+    Layout = "_Layout";
+}
+
+<form method="post" asp-action="UpdateBook">
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Author"></label>
+        <input asp-for="Author" class="form-control" />
+        <span asp-validation-for="Author" class="text-danger"></span>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Category"></label>
+        <input asp-for="Category" class="form-control" />
+        <span asp-validation-for="Category" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="LanguageId"></label>
+        <select asp-for="LanguageId" class="form-control" asp-items="(await _languageRepo.GetLanguage()).Select(x => new SelectListItem(){Text = x.Name, Value = x.Id.ToString()})">
+            <option value="">Please choose the option</option>
+        </select>
+        <span asp-validation-for="LanguageId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TotalPage"></label>
+        <input asp-for="TotalPage" class="form-control" />
+        <span asp-validation-for="TotalPage" class="text-danger"></span>
+    </div> 
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
+
